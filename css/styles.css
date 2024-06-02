@@ -1,0 +1,364 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap");
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    background-color: black;
+    color: white;
+}
+
+nav {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    padding: 20px;
+}
+
+.logo img {
+    width: 100px;
+}
+
+.links {
+    display: flex;
+    align-items: center;
+}
+
+.links a {
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+    margin: 0 20px;
+    position: relative;
+    transition: color 0.3s linear;
+}
+
+.links a::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 0;
+    height: 3.5px;
+    background-color: #f74f10;
+    transition: width 0.3s linear;
+}
+
+.links a:hover,
+.links a:hover::before {
+    color: #f74f10;
+    width: 100%;
+}
+
+.search {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.search i {
+    color: white;
+    cursor: pointer;
+    font-size: 1.3rem;
+}
+
+.searchbox {
+    display: none;
+}
+
+.toggle-button {
+    display: none;
+    color: white;
+    border: none;
+    cursor: pointer;
+
+}
+
+section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 50px 20px;
+    box-sizing: border-box;
+    height: auto;
+}
+
+.content {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.main-content {
+    max-width: 600px;
+    text-align: center;
+}
+
+.main-content h1 {
+    font-size: clamp(2rem, 1rem + 5vw, 4rem);
+}
+
+.main-content h2 {
+    color: #f74f10;
+    font-size: clamp(2rem, 1rem + 5vw, 3.5rem);
+}
+
+.main-content p {
+    margin-top: 10px;
+    color: #635e5c;
+}
+
+.order {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.order h3 {
+    font-size: 1.8rem;
+}
+
+.order button {
+    min-width: 45%;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    background: linear-gradient(to bottom right, #f74f10 40%, #8a3313);
+    color: white;
+    font-weight: 700;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    transition: 0.3s linear;
+}
+
+.order button:hover {
+    box-shadow: none;
+    background: linear-gradient(to bottom right, #8a3313, #f74f10 40%);
+    transform: scale(1.1);
+}
+
+.image img {
+    max-width: 100%;
+    width: 100%;
+    transform: rotate(40deg);
+}
+
+footer {
+    width: 100%;
+    background-color: #000;
+    color: white;
+    padding: 30px 20px;   
+}
+
+.footer-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.footer-border {
+    border-top: 1px solid white;
+    width: 80%;
+    padding-top: 20px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px;
+    padding: 0 20px;
+}
+
+.footer-column {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+}
+
+.Header {
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.Header a {
+    color: white;
+    text-decoration: none;
+}
+
+.Header i {
+    margin-right: 8px;
+}
+
+.Menu {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.Menu a {
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.Menu a:hover {
+    color: #f74f10;
+}
+
+.copy {
+    display: flex;
+    gap: 20px;
+    padding-top: 30px;
+    width: 100%;
+}
+
+.copy a {
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+.copy a:hover {
+    color: #f74f10;
+}
+
+.Guides {
+    display: flex;
+    align-items: center;
+}
+
+
+
+@media (max-width: 767px) {
+    nav{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px;
+    }
+
+    .logo{
+        width: 50px;
+    }
+    .links {
+        display: none;
+    }
+
+    .search{
+        display: none;
+    }
+
+    .toggle-button {
+        display: block;
+    }
+
+    section{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .content{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+    }
+
+  
+
+    footer{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .footer-section{
+        font-size: 15px;
+    }
+    
+    .footer-border{
+        border-top: 1px solid white;
+        width: 100%;
+        padding-top: 20px;
+
+    }
+
+    .Header{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .Menu{
+        display:none
+    }
+
+    .Guides {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+    }
+    
+
+    .arrow-down{
+        width: 10px;
+        height: 10px;
+    }
+
+    .copy{
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media (min-width: 884px) {
+
+    .image img {
+        min-width: 500px;
+    }
+
+   section{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 170px 170px;
+   }
+
+   .content{
+    display: flex;
+   }
+
+}
+
+@media (max-width: 440px) {
+    .links {
+        display: none;
+    }
+
+    .image img {
+        width: 100%;
+    }
+}
