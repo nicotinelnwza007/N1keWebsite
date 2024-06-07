@@ -27,3 +27,29 @@ var swiper = new Swiper(".slide-content", {
         },
     },
   });
+
+  function togglebutton()
+  {
+    if ( $("#search").css("display") == 'none') { 
+     $("#search").css("display", "block");
+    
+    }
+
+    else{
+      $("#search").css("display", "none");
+    }
+
+  }
+
+  function toggleMenu()
+  {
+    if ( $("#navbarMobile").css("display") == 'none') { 
+     $("#navbarMobile").css("display", "block");
+    
+    }
+
+    else{
+      $("#navbarMobile").css("display", "none");
+    }
+
+  }
