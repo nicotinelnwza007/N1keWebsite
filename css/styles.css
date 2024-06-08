@@ -69,11 +69,11 @@ nav {
 .links a {
     color: white;
     text-decoration: none;
-    font-weight: 500;  
+    font-weight: 500;
 }
 
 .links a::after {
-    content: '';
+    content: "";
     width: 100%;
     transform: scaleX(0);
     height: 2px;
@@ -122,7 +122,6 @@ nav {
     width: 150px;
 }
 
-
 .content {
     display: flex;
     align-items: center;
@@ -161,12 +160,11 @@ nav {
 h2,
 h4,
 p {
-    
     animation: slideInLeft 1s ease-out;
 }
 
 .main-content h1,
-h2{
+h2 {
     font-size: 20px;
 }
 
@@ -218,23 +216,23 @@ h2{
 
 @keyframes aura {
     0% {
-        box-shadow: 0 0 10px red; 
+        box-shadow: 0 0 10px red;
     }
     50% {
-        box-shadow: 0 0 20px red; 
+        box-shadow: 0 0 20px red;
     }
     100% {
-        box-shadow: 0 0 10px red; 
+        box-shadow: 0 0 10px red;
     }
 }
 
-@keyframes appear{
-    from{
+@keyframes appear {
+    from {
         opacity: 0;
         scale: 0.5;
     }
 
-    to{
+    to {
         opacity: 1;
         scale: 1;
     }
@@ -337,6 +335,37 @@ footer {
 }
 
 @media (max-width: 767px) {
+
+    .navbarMobile {
+        display: none;
+        flex-direction: column;
+        align-items: flex-start;
+        position: fixed;
+        top: 0;
+        right: 0; /* To slide in from the right */
+        z-index: 999;
+        width: 300px;
+        height: 100vh; /* Full height */
+        background-color: pink;
+        box-shadow: -5px 0 5px rgba(0, 0, 0, 0.25);
+        transition: transform 0.75s ease-out;
+    }
+
+    /* Show mobile navbar when active */
+    .navbarMobile.active {
+        display: flex;
+        transform: translateX(0);
+    }
+
+    /* Style links in mobile navbar */
+    .navbarMobile a {
+        text-align: center;
+        text-decoration: none;
+        padding: 15px 20px; /* Add some padding for better spacing */
+        width: 100%; /* Make links take full width */
+        color: black; 
+    }
+
     nav {
         position: static; /* Reset position */
     }
@@ -369,7 +398,7 @@ footer {
         align-items: center;
         padding: 20px;
     }
-    
+
     .main-content h1,
     .main-content h2 {
         font-size: 45px;
@@ -378,64 +407,90 @@ footer {
     .main-content p {
         font-size: 15px;
     }
-    
+
     .order {
         font-size: 16px;
         padding: 0 0px;
     }
-    
+
     footer {
         display: flex;
         align-items: center;
         justify-content: center;
     }
-    
+
     .footer-section {
         font-size: 15px;
     }
-    
+
     .footer-border {
         border-top: 1px solid white;
         width: 100%;
         padding-top: 20px;
     }
-    
+
     .Header {
         display: flex;
         flex-direction: column;
     }
-    
+
     .Menu {
         display: none;
     }
-    
+
     .hamburger {
         width: 45px;
         height: 45px;
     }
-    
+
     .Guides {
         display: flex;
         align-items: center;
         gap: 2px;
     }
-    
+
     .arrow-down {
         width: 20px;
         height: 20px;
     }
-    
+
     .copy {
         display: flex;
         flex-direction: column;
     }
 }
-    
+
 @media (max-width: 1024px) {
-    nav {
-
+    .navbarMobile {
+        display: none;
+        flex-direction: column;
+        align-items: flex-start;
+        position: fixed;
+        top: 0;
+        right: 0px; /* Initially outside the viewport */
+        z-index: 999;
+        width: 200px;
+        height: 100vh; /* Full height */
+        background-color: pink;
+        box-shadow: -5px 0 5px rgba(0, 0, 0, 0.25);
+        transition: right 0.75s ease-out; /* Transition the right property */
+        padding: 20px; /* Adjust padding here */
     }
-
+    
+    /* Show mobile navbar when active */
+    .navbarMobile.active {
+        right: 0; /* Slide in from the right */
+    }
+    
+    /* Style links in mobile navbar */
+    .navbarMobile a {
+        text-align: center;
+        text-decoration: none;
+        padding: 15px 20px; /* Add some padding for better spacing */
+        width: 100%; /* Make links take full width */
+        color: black; 
+    }
+    
     .logo {
         width: 50px;
     }
@@ -557,127 +612,129 @@ footer {
     }
 }
 
-    @media (max-width: 1024px) {
-        nav {
-            
-
-        }
-    
-        .logo {
-            width: 50px;
-        }
-        .links {
-            display: none;
-        }
-    
-        .search {
-            display: none;
-        }
-    
-        .toggle-button {
-            display: block;
-        }
-    
-        section {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-    
-        .content {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            padding: 20px;
-        }
-    
-        .main-content h1,h2{
-            font-size: 65px;
-        }
-
-        .main-content,h4,p{
-            font-size: 18px;
-        }
-    
-        .order {
-            font-size: 16px;
-            padding: 0 0px;
-        }
-    
-        footer {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-    
-        .footer-section {
-            font-size: 15px;
-        }
-    
-        .footer-border {
-            border-top: 1px solid white;
-            width: 100%;
-            padding-top: 20px;
-        }
-    
-        .Header {
-            display: flex;
-            flex-direction: column;
-        }
-    
-        .Menu {
-            font-size: 13px;
-        }
-    
-        .hamburger {
-            width: 45px;
-            height: 45px;
-        }
-    
-        .Guides {
-            display: flex;
-            align-items: center;
-            gap: 2px;
-        }
-    
-        .arrow-down {
-            width: 20px;
-            height: 20px;
-        }
-    
-        .copy {
-            display: flex;
-            font-size: 12px;
-        }
+@media (max-width: 1024px) {
+    nav {
     }
 
-        @media (min-width: 1300px) {
-           
-        section {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-    
-        .content {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 200px;
-        }
-    
-        .main-content h1,h2{
-            font-size: 65px;
-        }
+    .logo {
+        width: 50px;
+    }
+    .links {
+        display: none;
+    }
 
-        .main-content,h4,p{
-            font-size: 18px;
-        }
-    
-        .order {
-            font-size: 16px;
-            padding: 0 0px;
-        }
-        }
-         
+    .search {
+        display: none;
+    }
+
+    .toggle-button {
+        display: block;
+    }
+
+    section {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+    }
+
+    .main-content h1,
+    h2 {
+        font-size: 65px;
+    }
+
+    .main-content,
+    h4,
+    p {
+        font-size: 18px;
+    }
+
+    .order {
+        font-size: 16px;
+        padding: 0 0px;
+    }
+
+    footer {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .footer-section {
+        font-size: 15px;
+    }
+
+    .footer-border {
+        border-top: 1px solid white;
+        width: 100%;
+        padding-top: 20px;
+    }
+
+    .Header {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .Menu {
+        font-size: 13px;
+    }
+
+    .hamburger {
+        width: 45px;
+        height: 45px;
+    }
+
+    .Guides {
+        display: flex;
+        align-items: center;
+        gap: 2px;
+    }
+
+    .arrow-down {
+        width: 20px;
+        height: 20px;
+    }
+
+    .copy {
+        display: flex;
+        font-size: 12px;
+    }
+}
+
+@media (min-width: 1300px) {
+    section {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 200px;
+    }
+
+    .main-content h1,
+    h2 {
+        font-size: 65px;
+    }
+
+    .main-content,
+    h4,
+    p {
+        font-size: 18px;
+    }
+
+    .order {
+        font-size: 16px;
+        padding: 0 0px;
+    }
+}
